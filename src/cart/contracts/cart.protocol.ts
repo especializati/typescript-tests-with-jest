@@ -8,3 +8,12 @@ export interface CartProtocol {
   isEmpty(): boolean;
   clear(): void;
 }
+
+export interface CartProtocol2<T> {
+  addItem(item: Product): void;
+  removeItem(item: Product): void;
+  get items(): readonly T[];
+  total(): number;
+  isEmpty(): boolean;
+  clear(): void;
+}
